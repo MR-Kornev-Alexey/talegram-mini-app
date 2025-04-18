@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Box from "@mui/material/Box";
 import * as React from "react";
-import { Stack, Button } from "@mui/material";
+import { Stack  } from "@mui/material";
+import BackToHomeButton from "@/utils/BackToHomeButton";
 
 export default function NotFound() {
     return (
@@ -27,11 +27,7 @@ export default function NotFound() {
                 src="/assets/images/404.svg"
             />
 
-            <Link href="/" passHref>
-                <Button variant="outlined" sx={{    textTransform: 'uppercase', border: '1px solid #472621',color: 'icons.main', '&:hover': {color: 'icons.light', }}}>
-                   На главную
-                </Button>
-            </Link>
+            <BackToHomeButton/>
         </Stack>
     );
 }

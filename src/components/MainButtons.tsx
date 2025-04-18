@@ -30,7 +30,7 @@ const items = [
   {
     title: 'Чат',
       img: "assets/images/n-chat.png",
-      link: '/chat'
+      link: 'https://t.me/+2N4G1Y1-lspiMDNi'
   }
 ];
 
@@ -40,7 +40,7 @@ export default function MainButtons() {
       id="highlights"
       sx={{
         pt: { xs: 2},
-        pb: { xs: 8, sm: 4 },
+        pb: { xs: 4, sm: 4 },
       }}
     >
       <Container
@@ -67,8 +67,9 @@ export default function MainButtons() {
 
                       sx={{
                           border: '1px solid #472621',
+                          borderRadius: 4,
                           backgroundColor: 'beige.main',
-                          p: 2,
+                          p: 1,
                           cursor: 'pointer',
                           width: '100%' // Занимает всю ширину контейнера
                       }}

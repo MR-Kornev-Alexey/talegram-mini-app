@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import BackToHomeButton from "@/utils/BackToHomeButton";
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string[]>([]);
@@ -26,26 +27,37 @@ export default function FAQ() {
       id="faq"
       sx={{
         pt: { xs: 4, sm: 12 },
-        pb: { xs: 8, sm: 16 },
+        pb: { xs: 8, sm: 8 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
+        gap: { xs: 3, sm: 3 },
       }}
     >
-      <Typography
-        component="h2"
-        variant="h4"
-        sx={{
-          color: 'text.primary',
-          width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
-        }}
-      >
-        Frequently asked questions
-      </Typography>
-      <Box sx={{ width: '100%' }}>
+      <Box>
+        <Typography
+            component="h2"
+            variant="h2"
+            gutterBottom
+            sx={{ color: 'text.secondary', textTransform: 'uppercase', textAlign: 'center' }}
+        >
+          Вопросы - ответы
+        </Typography>
+        <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+          Раздел «Вопросы-Ответы» — это безопасное и доверительное пространство, где вы можете получить поддержку и рекомендации по самым волнующим темам 🤔💬. <br/>
+          Елена отвечает на вопросы мам в формате записей, помогая разобраться в сложных ситуациях,
+          развеять тревоги и почувствовать, что вы не одни на этом пути.
+          <br/><br/>
+          <b>Каждый выпуск — это:</b> <br/>
+          ❓ Открытые и честные ответы на важные вопросы <br/>
+          🧘‍♀️ Успокаивающие и практичные советы <br/>
+          🧑‍⚕️ Мнение эксперта, основанное на опыте и заботе <br/>
+
+          📬 Вы можете отправить свой вопрос в комментарии к публикации, так как важны каждое слово и каждая история 💖
+        </Typography>
+      </Box>
+      <Box sx={{ width: '100%',    }}>
         <Accordion
           expanded={expanded.includes('panel1')}
           onChange={handleChange('panel1')}
@@ -54,8 +66,10 @@ export default function FAQ() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1d-content"
             id="panel1d-header"
+            sx={{ color: 'icons.main', backgroundColor: 'brick.main',
+            }}
           >
-            <Typography component="span" variant="subtitle2">
+            <Typography component="span" variant="subtitle2" >
               How do I contact customer support if I have a question or issue?
             </Typography>
           </AccordionSummary>
@@ -66,7 +80,6 @@ export default function FAQ() {
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
               You can reach our customer support team by emailing&nbsp;
-              <Link href="mailto:support@email.com">support@email.com</Link>
               &nbsp;or calling our toll-free number. We&apos;re here to assist you
               promptly.
             </Typography>
@@ -80,6 +93,8 @@ export default function FAQ() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2d-content"
             id="panel2d-header"
+            sx={{ color: 'icons.main', backgroundColor: 'brick.main',
+            }}
           >
             <Typography component="span" variant="subtitle2">
               Can I return the product if it doesn&apos;t meet my expectations?
@@ -89,7 +104,7 @@ export default function FAQ() {
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: '100%', md: '90%' } }}
             >
               Absolutely! We offer a hassle-free return policy. If you&apos;re not
               completely satisfied, you can return the product within [number of
@@ -105,6 +120,8 @@ export default function FAQ() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3d-content"
             id="panel3d-header"
+            sx={{ color: 'icons.main', backgroundColor: 'brick.main',
+            }}
           >
             <Typography component="span" variant="subtitle2">
               What makes your product stand out from others in the market?
@@ -130,6 +147,8 @@ export default function FAQ() {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4d-content"
             id="panel4d-header"
+            sx={{ color: 'icons.main', backgroundColor: 'brick.main',
+            }}
           >
             <Typography component="span" variant="subtitle2">
               Is there a warranty on the product, and what does it cover?
@@ -149,6 +168,7 @@ export default function FAQ() {
           </AccordionDetails>
         </Accordion>
       </Box>
+      <BackToHomeButton/>
     </Container>
   );
 }
