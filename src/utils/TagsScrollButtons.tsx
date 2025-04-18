@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import "./style.css";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 
 // Типизация для одного элемента контента
 interface ContentItem {
