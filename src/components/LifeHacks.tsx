@@ -10,13 +10,12 @@ export default function LifeHacks() {
     <Container
       id="lifehacks"
       sx={{
-          pt: { xs: 4, sm: 4 },
-          pb: { xs: 8, sm: 8 },
+          pt: 4,
           position: 'relative',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 3, sm: 3 },
+          gap: 3,
       }}
     >
         <Box>

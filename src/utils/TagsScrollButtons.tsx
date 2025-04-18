@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import "./style.css";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 // Типизация для одного элемента контента
 interface ContentItem {
@@ -62,63 +63,61 @@ const TagsScrollButtons: React.FC<HorizontalScrollButtonsProps> = ({content}) =>
     }
 
     return (
-        <Box>
+        <Box sx={{py: 2}}>
             <Typography
                 component="h2"
                 variant="h4"
                 gutterBottom
-                sx={{ color: 'text.primary', pl:3  }}
+                sx={{color: 'text.primary', pl: 3}}
             >
                 Последние публикации
             </Typography>
-
-        <Box
-            ref={containerRef}
-            sx={{
-                display: {xs: "flex"},
-                overflowX: "auto",
-                whiteSpace: "nowrap",
-                width: '98%',
-                gap: {md: 1, xs: 0},
-                padding: 2,
-                scrollbarWidth: "none",
-                cursor: isDragging ? "grabbing" : "grab",
-                "&::-webkit-scrollbar": {
-                    display: "none",
-                },
-                pb: { xs: 4},
-            }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-        >
-            {content.map((item, index) => (
-                <Box
-                    onClick={() => handleSetActive(index)}
-                    key={index}
-                    className={selectActive(index)}
-                    sx={{
-                        cursor: "pointer",
-                        "&:hover": {
-                            backgroundColor: "#f8c0b3",
-                        },
-                    }}
-                >
-                    <Link
-                        className={selectActiveLink(index)}
-                        href={item.link} underline="none"
+            <Box
+                ref={containerRef}
+                sx={{
+                    display: {xs: "flex"},
+                    overflowX: "auto",
+                    whiteSpace: "nowrap",
+                    width: '98%',
+                    gap: 1,
+                    paddingLeft: 1,
+                    scrollbarWidth: "none",
+                    cursor: isDragging ? "grabbing" : "grab",
+                    "&::-webkit-scrollbar": {
+                        display: "none",
+                    },
+                }}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
+            >
+                {content.map((item, index) => (
+                    <Box
+                        onClick={() => handleSetActive(index)}
+                        key={index}
+                        className={selectActive(index)}
                         sx={{
-                            color: '#472621',
+                            cursor: "pointer",
                             "&:hover": {
-                                fontDecoration: 'none',
+                                backgroundColor: "#f8c0b3",
                             },
-                        }}>
-                        {item.title}
-                    </Link>
-                </Box>
-            ))}
-        </Box>
+                        }}
+                    >
+                        <Link
+                            className={selectActiveLink(index)}
+                            href={item.link} underline="none"
+                            sx={{
+                                color: '#472621',
+                                "&:hover": {
+                                    fontDecoration: 'none',
+                                },
+                            }}>
+                            {item.title}
+                        </Link>
+                    </Box>
+                ))}
+            </Box>
         </Box>
     );
 };

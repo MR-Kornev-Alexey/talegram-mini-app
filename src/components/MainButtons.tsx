@@ -39,8 +39,7 @@ export default function MainButtons() {
     <Box
       id="highlights"
       sx={{
-          pt: { xs: 4, sm: 4 },
-          pb: { xs: 8, sm: 8 },
+          pt: 2,
       }}
     >
       <Container
@@ -49,7 +48,6 @@ export default function MainButtons() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: { xs: 3, sm: 6 },
         }}
       >
 
