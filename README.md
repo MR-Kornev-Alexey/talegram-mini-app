@@ -37,21 +37,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 ssh -R 80:localhost:3000 serveo.net
-
-
-[
-{ "title": "название вебинара",
-  "date": "дата в формате DD-MM-YY",
-  "link":  "ссылка в канале" 
-}, //запятая обязательна
-{ 
-  "title": "название вебинара",
-  "date": "дата в формате DD-MM-YY",
-  "link":  "ссылка в канале"
-},
-{ 
-  "title": "название вебинара",
-  "date": "дата в формате DD-MM-YY",
-  "link":  "ссылка в канале"
-}
-]

@@ -12,6 +12,7 @@ import BackToHomeButton from "@/utils/BackToHomeButton";
 import qa from "@/data/q&a";
 import {formatDate} from "@/utils/formatDate";
 import {sortByDateDesc} from "@/utils/sortByDate";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 
 export default function FAQ() {
@@ -69,25 +70,56 @@ export default function FAQ() {
                   expanded={expanded.includes(panelId)}
                   onChange={handleChange(panelId)}
                   key={index}
+                  sx={{
+                      '& .MuiAccordionSummary-root, & .MuiAccordionDetails-root': {
+                          minHeight: 64, // фиксированная высота
+                          alignItems: 'center',
+                      },
+                  }}
               >
-                <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls={`${panelId}-content`}
-                    id={`${panelId}-header`}
-                    sx={{ color: 'icons.main', backgroundColor: 'brick.main' }}
-                >
-                  <Typography component="span" variant="subtitle2">
-                      {formatDate(item.date)}{" | "}{item.title}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Link href={item.link} sx={{ textDecoration: 'none' }}>
-                    <Typography variant="body2" gutterBottom>
-                      Перейти по ссылке в Телеграм канал
-                    </Typography>
-                  </Link>
-                </AccordionDetails>
+                  <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls={`${panelId}-content`}
+                      id={`${panelId}-header`}
+                      sx={{
+                          color: 'icons.main',
+                          backgroundColor: 'brick.main',
+                      }}
+                  >
+                      <Typography component="span" variant="subtitle2">
+                          {formatDate(item.date)}{" | "}{item.title}
+                      </Typography>
+                  </AccordionSummary>
+
+                  <AccordionDetails>
+                      <Link
+                          href={item.link}
+                          sx={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              width: '100%',
+                              textDecoration: 'none',
+                          }}
+                      >
+                          <Typography
+                              component="span"
+                              variant="subtitle2"
+                              sx={{ color: 'icons.main' }}
+                          >
+                              Перейти по ссылке в Телеграм канал
+                          </Typography>
+                          <ArrowForwardIosIcon
+                              sx={{
+                                  color: '#472621',
+                                  flexShrink: 0,
+                              }}
+                              fontSize="small"
+                          />
+                      </Link>
+                  </AccordionDetails>
               </Accordion>
+
           );
         })}
       </Box>
