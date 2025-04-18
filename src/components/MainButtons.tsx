@@ -39,8 +39,8 @@ export default function MainButtons() {
     <Box
       id="highlights"
       sx={{
-        pt: { xs: 2},
-        pb: { xs: 4, sm: 4 },
+          pt: { xs: 4, sm: 4 },
+          pb: { xs: 8, sm: 8 },
       }}
     >
       <Container

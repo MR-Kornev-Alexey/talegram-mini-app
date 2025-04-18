@@ -10,22 +10,21 @@ export default function Webinars() {
     <Container
       id="cases"
       sx={{
-        pt: { xs: 4, sm: 4 },
-        pb: { xs: 8, sm: 8 },
+          pt: { xs: 4, sm: 4 },
+          pb: { xs: 8, sm: 8 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
+        gap: { xs: 3, sm: 3 },
       }}
     >
-      <Box
-      >
+      <Box>
         <Typography
           component="h2"
           variant="h2"
           gutterBottom
-          sx={{ color: 'text.secondary', textTransform: 'uppercase', textAlign: 'center' }}
+          sx={{ color: 'text.secondary', textTransform: 'uppercase', textAlign: 'center', mb:4 }}
         >
          Разборы
         </Typography>

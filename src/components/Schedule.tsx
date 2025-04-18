@@ -9,25 +9,24 @@ import Link from "next/link";
 export default function Schedule() {
   return (
     <Container
-      id="pricing"
+      id="schedule"
       sx={{
-        pt: { xs: 4, sm: 4 },
-        pb: { xs: 8, sm: 16 },
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
+          pt: { xs: 4, sm: 4 },
+          pb: { xs: 8, sm: 8 },
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: { xs: 3, sm: 3 },
       }}
     >
-      <Box
-      >
-        <Typography
-          component="h2"
-          variant="h2"
-          gutterBottom
-          sx={{ color: 'text.secondary', textTransform: 'uppercase', textAlign: 'center' }}
-        >
+        <Box>
+            <Typography
+                component="h2"
+                variant="h2"
+                gutterBottom
+                sx={{ color: 'text.secondary', textTransform: 'uppercase', textAlign: 'center', mb:4 }}
+            >
           Расписание
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
