@@ -1,0 +1,25 @@
+:root {
+    --hermes-white: #FFFFFF;
+    --hermes-black: #000000;
+    --hermes-gold: #D5A021;
+    --hermes-red: #A50F15;
+    --hermes-light-gray: #F5F5F5;
+}
+
+body {
+    background: var(--hermes-white);
+    color: var(--hermes-black);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.button-primary {
+    background: var(--hermes-black);
+    color: var(--hermes-white);
+    border: none;
+    padding: 12px 24px;
+}
+
+.button-primary:hover {
+    background: var(--hermes-gold);
+    transition: 0.3s;
+}

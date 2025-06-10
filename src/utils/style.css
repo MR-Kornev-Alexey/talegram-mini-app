@@ -2,9 +2,9 @@
     height: 34px;
     padding: 8px 12px 8px 12px;
     border-radius: 31px;
-    background-color: #f8c0b3;
-    border: 1px solid #472621;
-    color: #472621;
+    background-color: #efe3e3;
+    border: 1px solid #6C5C5F;
+    color: #6C5C5F;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -15,8 +15,8 @@
     height: 34px;
     padding: 8px 12px 8px 12px;
     border-radius: 31px;
-    border: 1px solid #472621;
-    color: #472621;
+    border: 1px solid #6C5C5F;
+    color: #6C5C5F;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -27,8 +27,8 @@
     height: 32px;
     padding: 8px 12px 8px 12px;
     border-radius: 31px;
-    border: 1px solid #472621;
-    color: #472621;
+    border: 1px solid #6C5C5F;
+    color: #6C5C5F;
     cursor: pointer;
     display: flex;
     align-items: center;

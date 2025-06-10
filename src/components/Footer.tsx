@@ -21,19 +21,20 @@ export default function Footer() {
                 padding: '0 24px',
                 zIndex: 1000,
                 width: '100%',
+                backgroundColor: 'brick.main',
             }}
         >
             <Link href="/">
-                <HomeIcon fontSize='large' sx={{color: 'icons.main', '&:hover': {color: 'icons.light'}}}/>
+                <HomeIcon fontSize='large' sx={{color: 'primary.light', '&:hover': {color: 'primary.dark'}}}/>
             </Link>
             <Link href="/schedule">
-                <CalendarMonthIcon fontSize='large' sx={{color: 'icons.main', '&:hover': {color: 'icons.light'}}}/>
+                <CalendarMonthIcon fontSize='large' sx={{color: 'primary.light', '&:hover': {color: 'primary.dark'}}}/>
             </Link>
             <Link href="/library">
-                <AutoStoriesIcon fontSize='large' sx={{color: 'icons.main', '&:hover': {color: 'icons.light'}}}/>
+                <AutoStoriesIcon fontSize='large' sx={{color: 'primary.light', '&:hover': {color: 'primary.dark'}}}/>
             </Link>
             <Link href="/favorites">
-                <FavoriteBorderIcon fontSize='large' sx={{color: 'icons.main', '&:hover': {color: 'icons.light'}}}/>
+                <FavoriteBorderIcon fontSize='large' sx={{color: 'primary.light', '&:hover': {color: 'primary.dark'}}}/>
             </Link>
         </footer>
     );

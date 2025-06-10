@@ -11,11 +11,11 @@ export default function BackToHomeButton() {
     sx={{
         borderRadius: 2,
             textTransform: 'uppercase',
-            border: '1px solid #472621',
-            color: 'icons.main',
+            border: '1px solid #6C5C5F',
+            color: 'primary.light',
             '&:hover': {
-            color: 'icons.light',
-            border: '1px solid rgba(103,16,16,0.81)',
+            color: 'primary.dark',
+            border: '1px solid #43393b',
         },
     }}
 >

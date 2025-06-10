@@ -1,4 +1,6 @@
 type QAItem = {
+    id: number;
+    uuid: string;
     title: string;
     date: string; // формат: DD-MM-YY
     link: string;
@@ -12,6 +14,6 @@ export function sortByDateDesc(data: QAItem[]): QAItem[] {
         const dateA = new Date(2000 + yearA, monthA - 1, dayA);
         const dateB = new Date(2000 + yearB, monthB - 1, dayB);
 
-        return dateB.getTime() - dateA.getTime(); // Сортировка по убыванию
+        return dateB.getTime() - dateA.getTime();
     });
 }

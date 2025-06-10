@@ -3,7 +3,6 @@ import React, {useRef, useState} from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import "./style.css";
-import Typography from "@mui/material/Typography";
 
 // Типизация для одного элемента контента
 interface ContentItem {
@@ -63,14 +62,6 @@ const TagsScrollButtons: React.FC<HorizontalScrollButtonsProps> = ({content}) =>
 
     return (
         <Box sx={{py: 2}}>
-            <Typography
-                component="h2"
-                variant="h4"
-                gutterBottom
-                sx={{color: 'text.primary', pl: 3}}
-            >
-                Последние публикации
-            </Typography>
             <Box
                 ref={containerRef}
                 sx={{
@@ -99,7 +90,7 @@ const TagsScrollButtons: React.FC<HorizontalScrollButtonsProps> = ({content}) =>
                         sx={{
                             cursor: "pointer",
                             "&:hover": {
-                                backgroundColor: "#f8c0b3",
+                                backgroundColor: "#efe3e3",
                             },
                         }}
                     >

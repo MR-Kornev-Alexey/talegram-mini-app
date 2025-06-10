@@ -18,7 +18,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string[]>([]);
   const sortingData = sortByDateDesc(qa)
-  const handleChange =
+    const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(
         isExpanded

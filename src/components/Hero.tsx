@@ -20,7 +20,7 @@ export default function Hero() {
                     <Box
                         component="img"
                         sx={{
-                            width: '60%', // Установите ширину изображения
+                            width: '40%', // Установите ширину изображения
                             height: 'auto',
                             margin: 'auto',// Автоматически подстраивает высоту под ширину
                         }}

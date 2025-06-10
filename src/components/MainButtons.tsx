@@ -85,7 +85,7 @@ export default function MainButtons() {
                           <Box
                               component="img"
                               sx={{
-                                  width: 40,
+                                  width: "40px",
                                   height: 'auto',
                                   flexShrink: 0
                               }}

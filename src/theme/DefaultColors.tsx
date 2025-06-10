@@ -12,114 +12,94 @@ const baselightTheme = createTheme({
   direction: "ltr",
   palette: {
     primary: {
+      main: "#000000",        // Hermès black
+      light: "#6C5C5F",       // Dark gray
+      dark: "#43393b",        // Black
+      contrastText: "#FFFFFF" // White text
+    },
+    secondary: {
+      main: "#D5A021",       // Hermès gold
+      light: "#E8D08B",      // Light gold
+      dark: "#B3861B",       // Dark gold
+      contrastText: "#000000"
+    },
+    error: {
+      main: "#A50F15",       // Hermès red
+      light: "#D47D7D",
+      dark: "#8A0C11",
+      contrastText: "#FFFFFF"
+    },
+    warning: {
+      main: "#FFAE1F",
+      light: "#FFD580",
+      dark: "#CC8B00",
+      contrastText: "#000000"
+    },
+    info: {
       main: "#5D87FF",
       light: "#ECF2FF",
       dark: "#4570EA",
-    },
-    secondary: {
-      main: "#49BEFF",
-      light: "#E8F7FF",
-      dark: "#23afdb",
+      contrastText: "#FFFFFF"
     },
     success: {
       main: "#13DEB9",
       light: "#E6FFFA",
-      dark: "#02b3a9",
-      contrastText: "#ffffff",
+      dark: "#02B3A9",
+      contrastText: "#000000"
     },
-    info: {
-      main: "#539BFF",
-      light: "#EBF3FE",
-      dark: "#1682d4",
-      contrastText: "#ffffff",
-    },
-    error: {
-      main: "#FA896B",
-      light: "#FDEDE8",
-      dark: "#f3704d",
-      contrastText: "#ffffff",
-    },
-    warning: {
-      main: "#FFAE1F",
-      light: "#FEF5E5",
-      dark: "#ae8e59",
-      contrastText: "#ffffff",
-    },
-    grey: {
-      100: "#F2F6FA",
-      200: "#EAEFF4",
-      300: "#DFE5EF",
-      400: "#7C8FAC",
-      500: "#5A6A85",
-      600: "#2A3547",
-    },
-    beige: {
-      light: '#f5f5dc',
-      main: '#fdf3e9',
-      dark: '#e0e0b0',
-      contrastText: '#000000',
-    },
-    brick: {
-      light: '#d2691e',
-      main: '#f8c0b3',
-      dark: '#8b0000',
-      contrastText: '#ffffff',
-    },
-    icons:{
-      light: 'rgba(103,16,16,0.81)',
-      main: '#472621',
-      dark: '#2d1815',
-      contrastText: '#ffffff',
+    background: {
+      default: "#FFFFFF",     // White background
+      paper: "#F6F1EB"       // Light gray
     },
     text: {
-      primary: "#2A3547",
-      secondary: "#5A6A85",
+      primary: "#6C5C5F",     // Black text
+      secondary: "#333333",  // Dark gray
+      disabled: "#7C8FAC"
     },
     action: {
-      disabledBackground: "rgba(73,82,88,0.12)",
-      hoverOpacity: 0.02,
-      hover: "#f6f9fc",
+      active: "#D5A021",     // Gold
+      hover: "rgba(213, 160, 33, 0.08)",
+      selected: "rgba(213, 160, 33, 0.16)",
+      disabled: "rgba(0, 0, 0, 0.26)",
+      disabledBackground: "rgba(0, 0, 0, 0.12)"
     },
-    divider: "#e5eaef",
+    divider: "#E5EAEF"
   },
   typography: {
     fontFamily: plus.style.fontFamily,
     h1: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "2.25rem",
       lineHeight: "2.75rem",
-      fontFamily: plus.style.fontFamily,
     },
     h2: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "1.875rem",
       lineHeight: "2.25rem",
-      fontFamily: plus.style.fontFamily,
     },
     h3: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "1.5rem",
       lineHeight: "1.75rem",
-      fontFamily: plus.style.fontFamily,
     },
     h4: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "1.3125rem",
       lineHeight: "1.6rem",
     },
     h5: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "1.125rem",
       lineHeight: "1.6rem",
     },
     h6: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "1rem",
       lineHeight: "1.2rem",
     },
     button: {
-      textTransform: "capitalize",
-      fontWeight: 400,
+      textTransform: "none",
+      fontWeight: 600,
     },
     body1: {
       fontSize: "0.875rem",
@@ -132,177 +112,155 @@ const baselightTheme = createTheme({
       fontWeight: 400,
       lineHeight: "1rem",
     },
-    subtitle1: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
-    subtitle2: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
   },
   components: {
-    MuiCssBaseline: {
+    MuiButton: {
       styleOverrides: {
-        ".MuiPaper-elevation9, .MuiPopover-root .MuiPaper-elevation": {
-          boxShadow:
-            "rgb(145 158 171 / 30%) 0px 0px 2px 0px, rgb(145 158 171 / 12%) 0px 12px 24px -4px !important",
+        contained: {
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "none",
+            backgroundColor: "#D5A021" // Gold on hover
+          }
         },
-      },
+        outlined: {
+          borderColor: "#000000",
+          "&:hover": {
+            borderColor: "#D5A021",
+            color: "#D5A021"
+          }
+        }
+      }
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#FFFFFF",
+          color: "#000000",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
+        }
+      }
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: "7px",
-        },
-      },
-    },
-  },
+          borderRadius: "8px",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.05)"
+        }
+      }
+    }
+  }
 });
-
-
 
 const basedarkTheme = createTheme({
   direction: "ltr",
   palette: {
-    mode: "dark", // 🔑 Переключаем на темный режим
+    mode: "dark",
     primary: {
-      main: "#5D87FF",
-      light: "#8da4ff",
-      dark: "#4570EA",
+      main: "#D5A021",       // Gold becomes primary in dark mode
+      light: "#E8D08B",
+      dark: "#B3861B",
+      contrastText: "#000000"
     },
     secondary: {
-      main: "#49BEFF",
-      light: "#7ed2ff",
-      dark: "#23afdb",
-    },
-    success: {
-      main: "#13DEB9",
-      light: "#1de9b6",
-      dark: "#02b3a9",
-      contrastText: "#ffffff",
-    },
-    info: {
-      main: "#539BFF",
-      light: "#66b2ff",
-      dark: "#1682d4",
-      contrastText: "#ffffff",
+      main: "#FFFFFF",       // White as secondary
+      light: "#F5F5F5",
+      dark: "#CCCCCC",
+      contrastText: "#000000"
     },
     error: {
-      main: "#FA896B",
-      light: "#ffab91",
-      dark: "#f3704d",
-      contrastText: "#ffffff",
+      main: "#A50F15",
+      light: "#D47D7D",
+      dark: "#8A0C11",
+      contrastText: "#FFFFFF"
     },
     warning: {
       main: "#FFAE1F",
-      light: "#ffd149",
-      dark: "#ae8e59",
-      contrastText: "#ffffff",
+      light: "#FFD580",
+      dark: "#CC8B00",
+      contrastText: "#000000"
     },
-    grey: {
-      100: "#2a2a2a",
-      200: "#3a3a3a",
-      300: "#4a4a4a",
-      400: "#6a6a6a",
-      500: "#8a8a8a",
-      600: "#b8b8b8",
+    info: {
+      main: "#5D87FF",
+      light: "#ECF2FF",
+      dark: "#4570EA",
+      contrastText: "#FFFFFF"
+    },
+    success: {
+      main: "#13DEB9",
+      light: "#E6FFFA",
+      dark: "#02B3A9",
+      contrastText: "#000000"
     },
     background: {
-      default: "#06070b", // Темный фон
-      paper: "#1E1E1E",   // Фон для элементов
+      default: "#121212",    // Dark background
+      paper: "#1E1E1E"      // Darker surface
     },
     text: {
-      primary: "#ffffff",
-      secondary: "#b0b3b8",
-      disabled: "rgba(255, 255, 255, 0.5)",
+      primary: "#FFFFFF",    // White text
+      secondary: "#D5A021", // Gold for secondary text
+      disabled: "rgba(255, 255, 255, 0.5)"
     },
     action: {
-      active: "#5D87FF",
-      hover: "rgba(255, 255, 255, 0.08)",
-      selected: "rgba(255, 255, 255, 0.16)",
+      active: "#D5A021",
+      hover: "rgba(213, 160, 33, 0.08)",
+      selected: "rgba(213, 160, 33, 0.16)",
       disabled: "rgba(255, 255, 255, 0.3)",
-      disabledBackground: "rgba(255, 255, 255, 0.12)",
+      disabledBackground: "rgba(255, 255, 255, 0.12)"
     },
-    divider: "rgba(255, 255, 255, 0.12)",
+    divider: "rgba(255, 255, 255, 0.12)"
   },
   typography: {
-    fontFamily: plus.style.fontFamily,
-    h1: {
-      fontWeight: 600,
-      fontSize: "2.25rem",
-      lineHeight: "2.75rem",
-    },
-    h2: {
-      fontWeight: 600,
-      fontSize: "1.875rem",
-      lineHeight: "2.25rem",
-    },
-    h3: {
-      fontWeight: 600,
-      fontSize: "1.5rem",
-      lineHeight: "1.75rem",
-    },
-    h4: {
-      fontWeight: 600,
-      fontSize: "1.3125rem",
-      lineHeight: "1.6rem",
-    },
-    h5: {
-      fontWeight: 600,
-      fontSize: "1.125rem",
-      lineHeight: "1.6rem",
-    },
-    h6: {
-      fontWeight: 600,
-      fontSize: "1rem",
-      lineHeight: "1.2rem",
-    },
-    button: {
-      textTransform: "capitalize",
-      fontWeight: 400,
-    },
-    body1: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-      lineHeight: "1.334rem",
-    },
-    body2: {
-      fontSize: "0.75rem",
-      letterSpacing: "0rem",
-      fontWeight: 400,
-      lineHeight: "1rem",
-    },
-    subtitle1: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
-    subtitle2: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
+    ...baselightTheme.typography
   },
   components: {
-    MuiCssBaseline: {
+    MuiButton: {
       styleOverrides: {
-        ".MuiPaper-elevation9, .MuiPopover-root .MuiPaper-elevation": {
-          boxShadow:
-              "rgb(0 0 0 / 50%) 0px 0px 2px 0px, rgb(0 0 0 / 30%) 0px 12px 24px -4px !important",
+        contained: {
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "none",
+            backgroundColor: "#FFFFFF", // White on hover
+            color: "#000000"
+          }
         },
-      },
+        outlined: {
+          borderColor: "#D5A021",
+          color: "#D5A021",
+          "&:hover": {
+            borderColor: "#FFFFFF",
+            color: "#FFFFFF"
+          }
+        }
+      }
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#1E1E1E",
+          color: "#D5A021",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+        }
+      }
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: "7px",
-          backgroundColor: "#1E1E1E", // Темный фон для карточек
-        },
-      },
+          borderRadius: "8px",
+          backgroundColor: "#1E1E1E",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+        }
+      }
     },
-  },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: "#121212",
+          color: "#FFFFFF"
+        }
+      }
+    }
+  }
 });
 
-export { basedarkTheme };
-
-
-export { baselightTheme };
+export { baselightTheme, basedarkTheme };

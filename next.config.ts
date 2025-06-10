@@ -1,6 +1,6 @@
-// next.config.ts
 const nextConfig = {
-    reactStrictMode: true
+    reactStrictMode: true,
+    // output: 'export', // <--- это ключевой момент
 };
 
 export default nextConfig;
